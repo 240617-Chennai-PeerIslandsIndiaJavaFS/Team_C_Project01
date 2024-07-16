@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Client Information</title>
+    <link rel="stylesheet" href="./client_create_page.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Client Information</h1>
+        <form id="createClientForm">
+            <div class="form-group">
+                <label for="clientName">Enter Client Name</label>
+                <input type="text" id="clientName" name="clientName" required>
+            </div>
+            <div class="form-group">
+                <label for="clientEmail">Client Email</label>
+                <input type="email" id="clientEmail" name="clientEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="clientInfo">Enter Client Information</label>
+                <textarea id="clientInfo" name="clientInfo" required></textarea>
+            </div>
+            <button type="submit">Create Client</button>
+        </form>
+    </div>
+    <script src="./client_create_page.js"></script>
+</body>
+</html>
