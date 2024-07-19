@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     window.location.href = './project_manager_home_page.html';
                     break;
                 case 'Team Member':
-                    window.location.href = './user.html';
+                    window.location.href = './Teammember.html';
                     break;
                 default:
                     alert('Role not recognized.');
