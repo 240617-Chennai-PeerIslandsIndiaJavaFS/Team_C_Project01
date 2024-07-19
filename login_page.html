@@ -8,22 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-container">
-      
-        </div>
+        <div class="image-container"></div>
         <div class="login-container">
             <div class="welcome-message">
                 <h1>Welcome to TMS</h1>
                 <p>(Task Management System)</p>
             </div>
-            <form action="#">
-               
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <button>Login</button>
+            <form id="loginForm" action="#">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
             </form>
             <a href="./forget-password.html" class="register-link">Forget Password</a>
         </div>
     </div>
+    <script src="./login.js"></script>
 </body>
 </html>
