@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="dummy.css">
+    <script src="script2.js" defer></script>
+    <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-item" onclick="showForm('home')">Home</div>
+        <div class="nav-item" onclick="showForm('create-user')">Create User</div>
+        <div class="nav-item" onclick="showForm('update-user')">Update User</div>
+        <div class="nav-item" onclick="showForm('deactivate-user')">Deactivate User</div>
+        <div class="nav-item" onclick="showForm('create-project')">Create Project</div>
+        <div class="nav-item" onclick="showForm('create-client')">Create Client</div>
+        <div class="nav-item" onclick="showForm('assign-access-levels')">Assign Access Levels</div>
+        <div class="nav-item" onclick="showForm('track-user-activity')">Track User Activity</div>
+        <div class="nav-item" onclick="showForm('logout')">Logout</div>
+    </div>
+
+    <div id="content">
+        <div id="home" class="form-container">
+            <h2>Welcome to Task Management</h2>
+        </div>
+
+        <div id="create-user" class="form-container">
+            <h2>Create User</h2>
+            <form onsubmit="createUser(event)">
+                <label for="user-name">Name:</label>
+                <input type="text" id="user-name" name="user-name" required>
+                <label for="user-email">Email:</label>
+                <input type="email" id="user-email" name="user-email" required>
+                <label for="user-password">Password:</label>
+                <input type="password" id="user-password" name="user-password" required>
+                <label for="user-role">Role:</label>
+                <select id="user-role" name="user-role" required>
+                    <option value="admin">Admin</option>
+                    <option value="project_manager">Project Manager</option>
+                    <option value="team_member">Team Member</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="update-user" class="form-container">
+            <h2>Update User</h2>
+            <form onsubmit="updateUser(event)">
+                <label for="update-user-select">Select User:</label>
+                <select id="update-user-select" name="update-user-select" required>
+         
+                </select>
+                <label for="update-user-name">New Name:</label>
+                <input type="text" id="update-user-name" name="update-user-name" required>
+                <label for="update-user-email">New Email:</label>
+                <input type="email" id="update-user-email" name="update-user-email" required>
+                <label for="update-user-password">New Password:</label>
+                <input type="password" id="update-user-password" name="update-user-password" required>
+                <button type="submit">Update User</button>
+            </form>
+        </div>
+
+        <div id="deactivate-user" class="form-container">
+            <h2>Deactivate User</h2>
+            <form onsubmit="deactivateUser(event)">
+                <label for="deactivate-user-select">Select User:</label>
+                <select id="deactivate-user-select" name="deactivate-user-select" required>
+           
+                </select>
+                <button type="submit">Deactivate User</button>
+            </form>
+        </div>
+
+        <div id="create-project" class="form-container">
+            <h2>Create Project</h2>
+            <form onsubmit="createProject(event)">
+                <label for="project-name">Project Name:</label>
+                <input type="text" id="project-name" name="project-name" required>
+                <label for="client-name">Select Client:</label>
+                <select id="client-name" name="client-name" required>
+   
+                </select>
+                <label for="project-description">Project Description:</label>
+                <input type="text" id="project-description" name="project-description" required>
+                <button type="submit">Create Project</button>
+            </form>
+        </div>
+
+        <div id="create-client" class="form-container">
+            <h2>Create Client</h2>
+            <form onsubmit="createClient(event)">
+                <label for="client-name">Client Name:</label>
+                <input type="text" id="client-name" name="client-name" required>
+                <label for="client-email">Client Email:</label>
+                <input type="email" id="client-email" name="client-email" required>
+                <label for="client-description">Client Description:</label>
+                <input type="text" id="client-description" name="client-description" required>
+                <button type="submit">Create Client</button>
+            </form>
+        </div>
+
+        <div id="assign-access-levels" class="form-container">
+            <h2>Assign Access Levels</h2>
+            <form onsubmit="assignAccessLevels(event)">
+                <label for="access-user-id">Select User:</label>
+                <select id="access-user-id" name="access-user-id" required>
+            
+                </select>
+                <label for="existing-role">Existing Role:</label>
+                <input type="text" id="existing-role" name="existing-role" required>
+                <label for="new-role">New Role:</label>
+                <select id="new-role" name="new-role" required>
+                    <option value="admin">Admin</option>
+                    <option value="project_manager">Project Manager</option>
+                    <option value="team_member">Team Member</option>
+                </select>
+                <button type="submit">Assign Role</button>
+            </form>
+        </div>
+
+        <div id="track-user-activity" class="form-container">
+            <h2>Track User Activity</h2>
+            <div id="user-activity"></div>
+        </div>
+    </div>
+</body>
+</html>
