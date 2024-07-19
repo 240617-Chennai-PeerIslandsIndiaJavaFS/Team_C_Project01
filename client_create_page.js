@@ -10,6 +10,5 @@ document.getElementById('createClientForm').addEventListener('submit', function(
         return;
     }
     
-    // Handle client creation logic here
     alert('Client has been created successfully!');
 });

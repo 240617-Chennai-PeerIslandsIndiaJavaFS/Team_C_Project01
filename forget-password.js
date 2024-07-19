@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const errorMessage = document.getElementById('errorMessage');
 
     forgetPasswordForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting the traditional way
-
+        event.preventDefault();
         const newPassword = document.getElementById('newPassword').value;
         const confirmPassword = document.getElementById('confirmPassword').value;
 
@@ -13,9 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             errorMessage.style.display = 'block';
         } else {
             errorMessage.style.display = 'none';
-            // Proceed with form submission or further processing
             alert('Password reset successful!');
-            // You can add further processing here (e.g., sending data to a server)
         }
     });
 });

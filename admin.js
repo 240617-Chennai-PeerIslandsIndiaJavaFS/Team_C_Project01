@@ -160,9 +160,16 @@ function assignAccessLevels(event) {
         document.getElementById('existing-role').value = '';
     }
 }
+
+function logout() {
+    window.location.href = './login_page.html';
+}
+
+
 document.querySelector('#create-user-form')?.addEventListener('submit', createUser);
 document.querySelector('#update-user-form')?.addEventListener('submit', updateUser);
 document.querySelector('#deactivate-user-form')?.addEventListener('submit', deactivateUser);
 document.querySelector('#create-project-form')?.addEventListener('submit', createProject);
 document.querySelector('#create-client-form')?.addEventListener('submit', createClient);
 document.querySelector('#assign-access-levels-form')?.addEventListener('submit', assignAccessLevels);
+// document.querySelector('#logout')?.addEventListener('click', logout);

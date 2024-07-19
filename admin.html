@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Management</title>
-    <link rel="stylesheet" href="dummy.css">
-    <script src="script2.js" defer></script>
-    <link rel="stylesheet" href="sample.css">
+    <link rel="stylesheet" href="./admin1.css">
+    <link rel="stylesheet" href="./admin2.css">
+    <script src="./admin.js" defer></script>
 </head>
 <body>
     <div class="navbar">
@@ -18,7 +18,7 @@
         <div class="nav-item" onclick="showForm('create-client')">Create Client</div>
         <div class="nav-item" onclick="showForm('assign-access-levels')">Assign Access Levels</div>
         <div class="nav-item" onclick="showForm('track-user-activity')">Track User Activity</div>
-        <div class="nav-item" onclick="showForm('logout')">Logout</div>
+        <div class="nav-item" onclick="logout()">Logout</div>
     </div>
 
     <div id="content">
@@ -122,7 +122,19 @@
 
         <div id="track-user-activity" class="form-container">
             <h2>Track User Activity</h2>
-            <div id="user-activity"></div>
+            <div id="user-activity">
+                <div class="container">
+                    <h1>Track User Activity</h1>
+                    <div class="form-group">
+                        <label for="userSelect">Select User</label>
+                        <select id="userSelect" name="userSelect" required></select>
+                    </div>
+                    <button id="trackButton">Track</button>
+                    <div id="activityContainer" class="activity-container"></div>
+                </div>
+                <!-- <link rel="stylesheet" href="./track-user-activity.css"> -->
+                <script src="./track-user-activity.js"></script>
+            </div>
         </div>
     </div>
 </body>
